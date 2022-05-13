@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import { Avatar, Button } from "@material-ui/core";
@@ -30,15 +30,12 @@ const useStyles = makeStyles((theme) => ({
     height: "92%",
   },
   logout: {
-    // height: "8%",
-    // width: "100%",
     backgroundColor: "rgb(0,202,181)",
     marginTop: 20,
   },
   picture: {
     width: 50,
     height: 50,
-    // cursor: "pointer",
     backgroundColor: "rgb(0,202,181)",
     objectFit: "contain",
   },
@@ -76,14 +73,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const UserSidebar = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const classes = useStyles();
   const [state, setState] = React.useState({
     right: false,
   });
   const { user, setAlert, watchlist, coins, symbol } = CryptoState();
-
-  // console.log(watchlist, coins);
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -182,8 +177,8 @@ const UserSidebar = () => {
                       return (
                         <div className={classes.coin}>
                           <span
-                            onClick={() => navigate(`/coins/${coin.id}`)}
-                            style={{ cursor: "pointer" }}
+                          // onClick={() => navigate(`/coins/${coin.id}`)}
+                          // style={{ cursor: "pointer" }}
                           >
                             {coin.name}
                           </span>

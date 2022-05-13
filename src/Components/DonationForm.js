@@ -140,7 +140,6 @@ const DonationForm = (props) => {
           setErrorMessage(error.message);
         });
     } else {
-      console.log("Need to install MetaMask");
       setErrorMessage("Please install MetaMask browser extension to interact");
     }
   };
@@ -198,7 +197,6 @@ const DonationForm = (props) => {
       setSuccessMessage("Successfully paid, THANK YOU! ");
       setErrorMessage("");
     } catch (error) {
-      console.log(error.code);
       setSuccessMessage("");
 
       if (

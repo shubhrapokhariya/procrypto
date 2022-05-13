@@ -59,7 +59,6 @@ const AuthModal = ({ check }) => {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    console.log(value);
   };
 
   const googleProvider = new GoogleAuthProvider();

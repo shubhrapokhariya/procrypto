@@ -64,8 +64,6 @@ const Carousel = (props) => {
 
   const fetchTrendingCoins = async () => {
     const { data } = await axios.get(TrendingCoins(currency));
-
-    console.log(trending);
     setTrending(data);
   };
 
