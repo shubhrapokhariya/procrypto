@@ -170,7 +170,7 @@ const UserSidebar = () => {
                       color: "black",
                     }}
                   >
-                    Watchlist
+                    Favorites
                   </span>
                   {coins.map((coin) => {
                     if (watchlist.includes(coin.id))

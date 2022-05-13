@@ -140,7 +140,7 @@ const DonationForm = (props) => {
           setErrorMessage(error.message);
         });
     } else {
-      setErrorMessage("Please install MetaMask browser extension to interact");
+      setErrorMessage("Please install MetaMask browser extension to interact!");
     }
   };
 
@@ -168,9 +168,9 @@ const DonationForm = (props) => {
   };
 
   // listen for account changes
-  window.ethereum.on("accountsChanged", accountChangedHandler);
+  // window.ethereum.on("accountsChanged", accountChangedHandler);
 
-  window.ethereum.on("chainChanged", chainChangedHandler);
+  // window.ethereum.on("chainChanged", chainChangedHandler);
 
   const sendDonation = async (e) => {
     e.preventDefault();

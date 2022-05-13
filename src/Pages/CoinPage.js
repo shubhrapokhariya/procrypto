@@ -416,7 +416,7 @@ const CoinPage = () => {
             }}
             onClick={inWatchlist ? removeFromWatchlist : addToWatchlist}
           >
-            {inWatchlist ? "Remove from Watchlist" : "Add to Watchlist"}
+            {inWatchlist ? "Remove from Favorites" : "Add to Favorites"}
           </Button>
         </div>
       )}
