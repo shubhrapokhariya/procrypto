@@ -42,7 +42,7 @@ function App() {
 
             <Routes>
               <Route path="/" element={<Home check={darkMode} />} exact />
-              <Route path="/coins/:id" element={<CoinPage />} exact />
+              <Route path="/coins/:id" element={<CoinPage />} />
               <Route
                 path="/donate"
                 element={<Donate check={darkMode} />}
