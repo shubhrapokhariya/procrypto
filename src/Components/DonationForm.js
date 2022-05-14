@@ -162,16 +162,6 @@ const DonationForm = (props) => {
       });
   };
 
-  const chainChangedHandler = () => {
-    // reload the page to avoid any errors with chain change mid use of application
-    window.location.reload();
-  };
-
-  // listen for account changes
-  // window.ethereum.on("accountsChanged", accountChangedHandler);
-
-  // window.ethereum.on("chainChanged", chainChangedHandler);
-
   const sendDonation = async (e) => {
     e.preventDefault();
 
