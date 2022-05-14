@@ -89,6 +89,11 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "10px",
     },
   },
+  loader: {
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "18px",
+    },
+  },
 }));
 
 const CoinsTable = (props) => {
@@ -138,7 +143,10 @@ const CoinsTable = (props) => {
 
       <TableContainer>
         {loading ? (
-          <LinearProgress style={{ backgroundColor: "rgb(0,202,181)" }} />
+          <LinearProgress
+            style={{ backgroundColor: "rgb(0,202,181)" }}
+            className={classes.loader}
+          />
         ) : (
           <Table style={{ marginBottom: 20 }}>
             <TableHead>

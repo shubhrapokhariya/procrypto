@@ -1,5 +1,5 @@
 import React from "react";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import { Avatar, Button } from "@material-ui/core";
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const UserSidebar = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const classes = useStyles();
   const [state, setState] = React.useState({
     right: false,
@@ -123,6 +123,12 @@ const UserSidebar = () => {
         type: "error",
       });
     }
+  };
+
+  const handleRefresh = () => {
+    // by calling this method react re-renders the component
+    setState({});
+    window.location.reload();
   };
 
   return (
@@ -176,12 +182,15 @@ const UserSidebar = () => {
                     if (watchlist.includes(coin.id))
                       return (
                         <div className={classes.coin}>
-                          <span
-                          // onClick={() => navigate(`/coins/${coin.id}`)}
-                          // style={{ cursor: "pointer" }}
+                          <button
+                            onClick={() => {
+                              navigate(`/coins/${coin.id}`);
+                              handleRefresh();
+                            }}
+                            style={{ cursor: "pointer" }}
                           >
                             {coin.name}
-                          </span>
+                          </button>
                           <span style={{ display: "flex", gap: 8 }}>
                             {symbol}{" "}
                             {numberWithCommas(coin.current_price.toFixed(2))}
