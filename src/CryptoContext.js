@@ -40,8 +40,11 @@ const CryptoContext = ({ children }) => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      if (user) setUser(user);
-      else setUser(null);
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
       // console.log(user);
     });
   }, []);
@@ -73,6 +76,7 @@ const CryptoContext = ({ children }) => {
         loading,
         watchlist,
         fetchCoinsData,
+        setWatchlist,
       }}
     >
       {children}
