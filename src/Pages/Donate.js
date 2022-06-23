@@ -4,7 +4,7 @@ import DonationForm from "../Components/DonationForm";
 const Donate = (props) => {
   const { check } = props;
   return (
-    <div>
+    <div className="do-na-tion">
       <DonationForm check={check} />
     </div>
   );

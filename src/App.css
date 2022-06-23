@@ -1,21 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap');
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior: smooth;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-a{
-    text-decoration: none;
-   
+a {
+  text-decoration: none;
 }
 
 html body {
-    font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 button:disabled,
-button[disabled]{
+button[disabled] {
   cursor: auto;
+}
+.do-na-tion {
+  font: bold;
 }
