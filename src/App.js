@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
-import About from "./pages/About";
 import CoinPage from "./Pages/CoinPage";
 import Donate from "./Pages/Donate";
 import Alert from "./Components/Auth/Alert";
@@ -44,7 +43,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Home check={darkMode} />} exact />
               <Route path="/coins/:id" element={<CoinPage />} />
-              <Route path="/about" element={<About />} />
               <Route
                 path="/donate"
                 element={<Donate check={darkMode} />}

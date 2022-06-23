@@ -18,6 +18,3 @@ button:disabled,
 button[disabled] {
   cursor: auto;
 }
-.do-na-tion {
-  font: bold;
-}
